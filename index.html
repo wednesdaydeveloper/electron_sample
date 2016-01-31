@@ -1,10 +1,25 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8">
-  <title>Sample</title>
+  <!-- 以下の順番で読み込むこと -->
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script>
+    if (typeof module === "object" && module.exports) {
+      window.$ = window.jQuery = module.exports;
+      module.exports = {};
+    }
+    $(function() {
+      alert("sssss");
+      $("h1").css('color', 'red');
+    });
+  </script>
+  <title>Electron Read Us</title>
 </head>
+
 <body>
-  <p>Hello World</p>
+  <h1>Hello, electron!</h1>
 </body>
+
 </html>
