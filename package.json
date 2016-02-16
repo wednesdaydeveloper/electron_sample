@@ -1,20 +1,10 @@
 {
-  "name": "electron_sample",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "FirstApp",
+  "version": "0.1.0",
   "scripts": {
-    "build": "node_modules/.bin/electron .",
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/wednesdaydeveloper/electron_sample.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/wednesdaydeveloper/electron_sample/issues"
-  },
-  "homepage": "https://github.com/wednesdaydeveloper/electron_sample#readme"
+    "start": "electron .",
+    "pack": "asar pack ./electron_sample ./electron_sample.asar",
+    "build": "electron-packager ../electron_sample electron_sample --platform=all --arch=x64 --version=0.36.7"
+    },
+    "main": "main.js"
 }
